@@ -69,3 +69,21 @@ git clone https://github.com/MohanPiru/Deploy-Website-on-VM.git
 ```bash
 service httpd start
 ```
+## How to delete Apache server from your System
+Run the following commands 
+```bash
+sudo service apache2 stop
+```
+```bash
+sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
+```
+```bash
+sudo apt-get autoremove
+```
+```bash
+whereis apache2
+```
+After this command if you get "apache2: /etc/apache2" this type of output , copy the all output locations[it can be more than one] where there is apache2 and run the following 
+```bash
+sudo rm -rf <"/etc/apache2" - replace it by all the locations>
+```
