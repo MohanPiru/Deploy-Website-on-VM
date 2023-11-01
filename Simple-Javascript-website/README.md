@@ -6,6 +6,7 @@ This is a simple javascript website[code is freely available on internet ] which
 * Create an AWS account
 * Go to EC2 instance -> Lauch Instance 
 * Choose **Ubuntu** image [here using 22.04 LTS (free tier eligible)] and instance type **t2.micro** [it is in free tier] generate a key pair(RSA -> .pem type)[it will download a pem file to your local ,keep it safe it will be used to connect your instance through ssh]
+* You will choose the type of traffic your “virtual Machine” will allow from the outside. You need to allow two types of traffic  **SSH** (so we can “log in” to the virtual Machine) and **HTTP** (so we can view our webpage through the browser).
 * Keep others as default and click **Launch Instance**
 
 ## Connect Your Instance Through ssh
@@ -20,6 +21,7 @@ To connect to the instance 1st go to the directory or copy the path where your p
 ```bash
   ssh -i /path/key-pair-name.pem <instance-user-name>@<instance-public-IP>
 ```
+Type **yes** 
 #### Update server packages on Ubuntu
 ```bash
  sudo apt update
@@ -27,18 +29,18 @@ To connect to the instance 1st go to the directory or copy the path where your p
 #### Install Apache 
  Apache is the web server that processes requests and serves web assets and content via HTTP.
  ```bash
- sudo apt install apache2
+ sudo apt install apache2 -y
 ```
 #### Clone my git Repository
 ```bash
  git clone https://github.com/MohanPiru/Deploy-Website-on-VM.git 
 ```
-### Move all files to var/www/html
+### Move all files to /var/www/html
 ```bash
-sudo mv Deploy-Website-on-VM/Simple-Javascript-website/demo-website/* var/www/html/
+sudo mv Deploy-Website-on-VM/Simple-Javascript-website/demo-website/* /var/www/html/
 
 ```
-**var/www/html** is just the default root folder of the web server or the folder you want to install your website on.
+**/var/www/html** is just the default root folder of the web server or the folder you want to install your website on.
 ### Start Apache service
 ```bash
  sudo systemctl start apache2
