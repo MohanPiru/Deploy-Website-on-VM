@@ -9,7 +9,7 @@ This is a simple javascript website[code is freely available on internet ] which
 * You will choose the type of traffic your “virtual Machine” will allow from the outside. You need to allow two types of traffic  **SSH** (so we can “log in” to the virtual Machine) and **HTTP** (so we can view our webpage through the browser).
 * Keep others as default and click **Launch Instance**
 
-## Connect Your Instance Through ssh
+### Connect Your Instance Through ssh
   * If you are using Linux just open terminal 
   * The latest builds of Windows 10 and Windows 11 include a built-in SSH server and client that are based on OpenSSH
   * Or you can use any other software like **PuTTY**
@@ -22,16 +22,16 @@ To connect to the instance 1st go to the directory or copy the path where your p
   ssh -i /path/key-pair-name.pem <instance-user-name>@<instance-public-IP>
 ```
 Type **yes** 
-#### Update server packages on Ubuntu
+### Update server packages on Ubuntu
 ```bash
  sudo apt update
 ```
-#### Install Apache 
+### Install Apache 
  Apache is the web server that processes requests and serves web assets and content via HTTP.
  ```bash
  sudo apt install apache2 -y
 ```
-#### Clone my git Repository
+### Clone my git Repository
 ```bash
  git clone https://github.com/MohanPiru/Deploy-Website-on-VM.git 
 ```
