@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-website
+  labels:
+    app: nodejs-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nodejs-website
+  template:
+    metadata:
+      labels:
+        app: nodejs-website
+    spec:
+      containers:
+      - name: nodejs-website
+        image: mohanpiru/nodejs-website:latest
+        ports:
+        - containerPort: 3000
