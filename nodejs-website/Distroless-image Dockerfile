@@ -1,0 +1,10 @@
+FROM node:10 AS builder
+COPY . /app
+WORKDIR /app
+RUN npm install
+
+FROM gcr.io/distroless/nodejs:10
+COPY --from=builder /app /app
+WORKDIR /app
+EXPOSE 3000
+CMD ["server.js"]
