@@ -59,3 +59,5 @@ Now serach it in your browser
  <your vm public ip>:3000
 ```
 ## You can see your website running ...
+
+**distroless-image Dockerfile will create a image of 89mb only but the actual Dockerfile will create 1.1gb image**
