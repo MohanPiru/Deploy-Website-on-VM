@@ -61,3 +61,4 @@ Now serach it in your browser
 ## You can see your website running ...
 
 **distroless-image Dockerfile will create a image of 89mb only but the actual Dockerfile will create 1.1gb image**
+<img width="948" alt="nodejs-website" src="https://github.com/MohanPiru/Deploy-Website-on-VM/assets/140044323/9dd5a55d-5e2b-44e9-8c87-50b06b5bb0c8">
